@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+import 'package:test_app/list_view.dart';
+
+class GridViews extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => ListViews()),
+            );
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
+        title: Text('Grid View Lesson'),
+      ),
+
+      // body: Padding(
+      //   padding: const EdgeInsets.all(10),
+      //   child: GridView.count(
+      //     crossAxisCount: 4,
+      //     crossAxisSpacing: 5,
+      //     mainAxisSpacing: 5,
+      //     children: [
+      //       Container(color: Colors.blue),
+      //       Container(color: Colors.green),
+      //       Container(color: Colors.yellow),
+      //       Container(color: Colors.red),
+      //       Container(color: Colors.orange),
+      //       Container(color: Colors.amber),
+      //     ],
+      //   ),
+      // ),
+      body: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 4,
+          crossAxisSpacing: 5,
+          mainAxisSpacing: 5,
+        ),
+        itemCount: 20,
+        itemBuilder: (context, index) {
+          return Card(
+            color: Colors.green.shade600,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [Icon(Icons.call), Text('Cash In...')],
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
