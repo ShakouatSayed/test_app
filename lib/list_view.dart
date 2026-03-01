@@ -3,6 +3,8 @@ import 'package:test_app/grid_view.dart';
 import 'package:test_app/mediaQuery_design.dart';
 
 class ListViews extends StatelessWidget {
+  const ListViews({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

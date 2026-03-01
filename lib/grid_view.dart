@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/list_view.dart';
+import 'package:test_app/stack_customwidget.dart';
 
 class GridViews extends StatelessWidget {
+  const GridViews({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,11 +45,19 @@ class GridViews extends StatelessWidget {
         ),
         itemCount: 20,
         itemBuilder: (context, index) {
-          return Card(
-            color: Colors.green.shade600,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Icon(Icons.call), Text('Cash In...')],
+          return InkWell(
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => StackCustomwidget()),
+              );
+            },
+            child: Card(
+              color: Colors.green.shade600,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Icon(Icons.call), Text('Cash In...')],
+              ),
             ),
           );
         },

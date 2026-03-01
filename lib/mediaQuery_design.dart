@@ -4,6 +4,8 @@ import 'package:test_app/list_view.dart';
 import 'package:test_app/text_from_fields.dart';
 
 class MediaqueryDesign extends StatelessWidget {
+  const MediaqueryDesign({super.key});
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;

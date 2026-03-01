@@ -12,7 +12,7 @@ class TextFromFields extends StatefulWidget {
 class _TextFromFieldsState extends State<TextFromFields> {
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     TextEditingController phoneController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     return Scaffold(
@@ -34,16 +34,12 @@ class _TextFromFieldsState extends State<TextFromFields> {
           padding: const EdgeInsets.all(10),
 
           child: Form(
-            key: _formKey,
+            key: formKey,
 
             child: Column(
               children: [
                 SizedBox(height: 20),
-                Image.network(
-                  height: 100,
-                  width: 50,
-                  "https://www.pexels.com/search/natural/",
-                ),
+
                 SizedBox(height: 20),
                 Image.asset(
                   height: 200,
@@ -91,7 +87,7 @@ class _TextFromFieldsState extends State<TextFromFields> {
                   width: 200,
                   child: ElevatedButton(
                     onPressed: () {
-                      if (_formKey.currentState!.validate()) {
+                      if (formKey.currentState!.validate()) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text('Login Successfull.')),
                         );
