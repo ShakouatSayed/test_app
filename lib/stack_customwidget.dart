@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/grid_view.dart';
+import 'package:test_app/ui_conponent.dart';
 import 'package:test_app/widgets/stack_widget.dart';
 
 class StackCustomwidget extends StatelessWidget {
+  const StackCustomwidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,7 +127,14 @@ class StackCustomwidget extends StatelessWidget {
                       left: 200,
 
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => UiConponent(),
+                            ),
+                          );
+                        },
                         child: Text('Book Now'),
                       ),
                     ),

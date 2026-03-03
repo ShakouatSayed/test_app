@@ -37,7 +37,7 @@ class StactWidgets extends StatelessWidget {
               ),
             ),
             Text(
-              "*** ${rate}",
+              "*** $rate",
               style: TextStyle(fontSize: 20, color: Colors.white),
             ),
           ],
