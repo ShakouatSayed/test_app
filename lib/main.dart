@@ -8,6 +8,7 @@ import 'package:test_app/navigator_learn/page01.dart';
 import 'package:test_app/navigator_learn/page02.dart';
 import 'package:test_app/navigator_learn/page03.dart';
 import 'package:test_app/stack_customwidget.dart';
+import 'package:test_app/tab_bar.dart';
 import 'package:test_app/text_filed.dart';
 import 'package:test_app/text_from_fields.dart';
 import 'package:test_app/ui_conponent.dart';
@@ -41,8 +42,9 @@ class MyApp extends StatelessWidget {
             '/page01': (context) => Page01(),
             '/page02': (context) => Page02(name: 'Sayed'),
             '/page03': (context) => Page03(),
+            '/tab_bar': (context) => TabBars(),
           },
-          initialRoute: '/',
+          initialRoute: '/tab_bar',
           theme: ThemeData(
             brightness: Brightness.light,
             primaryColor: Colors.deepPurple,

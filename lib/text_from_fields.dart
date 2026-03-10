@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/mediaQuery_design.dart';
-import 'package:test_app/text_filed.dart';
 
 class TextFromFields extends StatefulWidget {
   const TextFromFields({super.key});

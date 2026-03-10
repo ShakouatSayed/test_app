@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/grid_view.dart';
-import 'package:test_app/ui_conponent.dart';
 import 'package:test_app/widgets/stack_widget.dart';
 
 class StackCustomwidget extends StatelessWidget {

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/home_screen.dart';
-import 'package:test_app/text_from_fields.dart';
 
 class TextFileds extends StatelessWidget {
   const TextFileds({super.key});

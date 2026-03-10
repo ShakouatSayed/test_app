@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/list_view.dart';
-import 'package:test_app/stack_customwidget.dart';
 
 class GridViews extends StatelessWidget {
   const GridViews({super.key});

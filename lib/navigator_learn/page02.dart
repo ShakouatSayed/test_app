@@ -3,7 +3,7 @@ import 'package:test_app/navigator_learn/page03.dart';
 
 class Page02 extends StatelessWidget {
   final String name;
-  Page02({required this.name, super.key});
+  const Page02({required this.name, super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

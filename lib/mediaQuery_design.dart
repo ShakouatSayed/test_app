@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app/list_view.dart';
-import 'package:test_app/text_from_fields.dart';
 
 class MediaqueryDesign extends StatelessWidget {
   const MediaqueryDesign({super.key});

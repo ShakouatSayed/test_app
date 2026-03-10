@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/navigator_learn/page01.dart';
-import 'package:test_app/stack_customwidget.dart';
 
 class UiConponent extends StatelessWidget {
   const UiConponent({super.key});
