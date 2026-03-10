@@ -11,10 +11,7 @@ class ListViews extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => MediaqueryDesign()),
-            );
+            Navigator.pop(context);
           },
           icon: Icon(Icons.arrow_back),
         ),
@@ -83,10 +80,7 @@ class ListViews extends StatelessWidget {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => GridViews()),
-              );
+              Navigator.pushNamed(context, '/gird_view');
             },
             child: Card(
               color: Colors.green,

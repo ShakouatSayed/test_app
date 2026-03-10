@@ -16,19 +16,7 @@ class _TextFromFieldsState extends State<TextFromFields> {
     TextEditingController phoneController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("TextFromFields"),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => TextFileds()),
-            );
-          },
-          icon: Icon(Icons.arrow_back),
-        ),
-      ),
+      appBar: AppBar(centerTitle: true, title: Text("TextFromFields")),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(10),
@@ -92,12 +80,7 @@ class _TextFromFieldsState extends State<TextFromFields> {
                           SnackBar(content: Text('Login Successfull.')),
                         );
                       }
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => MediaqueryDesign(),
-                        ),
-                      );
+                      Navigator.pushNamed(context, '/mediaQuery_design');
                     },
                     child: Text("Submit"),
                   ),

@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/grid_view.dart';
 import 'package:test_app/home_screen.dart';
+import 'package:test_app/list_view.dart';
+import 'package:test_app/mediaQuery_design.dart';
+import 'package:test_app/navigator_learn/page01.dart';
+import 'package:test_app/navigator_learn/page02.dart';
+import 'package:test_app/navigator_learn/page03.dart';
+import 'package:test_app/stack_customwidget.dart';
+import 'package:test_app/text_filed.dart';
+import 'package:test_app/text_from_fields.dart';
+import 'package:test_app/ui_conponent.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,6 +29,20 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
+          routes: {
+            '/': (context) => HomeScreen(),
+            '/text_field': (context) => TextFileds(),
+            '/text_from_fields': (context) => TextFromFields(),
+            '/mediaQuery_design': (context) => MediaqueryDesign(),
+            '/list_view': (context) => ListViews(),
+            '/gird_view': (context) => GridViews(),
+            '/stack_customwidget': (context) => StackCustomwidget(),
+            '/ui_conponent': (context) => UiConponent(),
+            '/page01': (context) => Page01(),
+            '/page02': (context) => Page02(name: 'Sayed'),
+            '/page03': (context) => Page03(),
+          },
+          initialRoute: '/',
           theme: ThemeData(
             brightness: Brightness.light,
             primaryColor: Colors.deepPurple,
@@ -48,7 +72,6 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
             ),
           ),
-          home: HomeScreen(),
         );
       },
     );

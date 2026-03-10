@@ -11,19 +11,7 @@ class TextFileds extends StatelessWidget {
     TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("TextFields & Container"),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => HomeScreen()),
-            );
-          },
-          icon: Icon(Icons.arrow_back),
-        ),
-      ),
+      appBar: AppBar(centerTitle: true, title: Text("TextFields & Container")),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -91,10 +79,7 @@ class TextFileds extends StatelessWidget {
               SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => TextFromFields()),
-                  );
+                  Navigator.pushNamed(context, '/text_from_fields');
                 },
                 child: Container(
                   alignment: Alignment.center,

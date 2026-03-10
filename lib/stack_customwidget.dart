@@ -12,10 +12,7 @@ class StackCustomwidget extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => GridViews()),
-            );
+            Navigator.pop(context);
           },
           icon: Icon(Icons.arrow_back),
         ),
@@ -128,12 +125,7 @@ class StackCustomwidget extends StatelessWidget {
 
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => UiConponent(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, '/ui_conponent');
                         },
                         child: Text('Book Now'),
                       ),

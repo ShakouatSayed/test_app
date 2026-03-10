@@ -17,10 +17,7 @@ class MediaqueryDesign extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => TextFromFields()),
-            );
+            Navigator.pop(context);
           },
           icon: Icon(Icons.arrow_back),
         ),
@@ -35,10 +32,7 @@ class MediaqueryDesign extends StatelessWidget {
             Text("Responsize Text", style: TextStyle(fontSize: 10.sp)),
             InkWell(
               onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListViews()),
-                );
+                Navigator.pushNamed(context, '/list_view');
               },
               child: Container(height: 150.h, width: 300.w, color: Colors.blue),
             ),

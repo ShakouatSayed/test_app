@@ -7,17 +7,18 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("First App..."), centerTitle: true),
+      appBar: AppBar(
+        title: Text("First App..."),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => TextFileds()),
-                );
+                Navigator.pushNamed(context, '/text_field');
               },
               child: Text("Submit"),
             ),

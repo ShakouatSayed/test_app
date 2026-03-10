@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/navigator_learn/page01.dart';
 import 'package:test_app/stack_customwidget.dart';
 
 class UiConponent extends StatelessWidget {
+  const UiConponent({super.key});
+
   @override
   Widget build(BuildContext context) {
     void showAlertDialoug() {
@@ -84,10 +87,7 @@ class UiConponent extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => StackCustomwidget()),
-            );
+            Navigator.pop(context);
           },
           icon: Icon((Icons.arrow_back)),
         ),
@@ -151,8 +151,10 @@ class UiConponent extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.wallpaper),
+        onPressed: () {
+          Navigator.pushNamed(context, '/page01');
+        },
+        child: Icon(Icons.more),
       ),
     );
   }
