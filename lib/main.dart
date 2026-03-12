@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app/animatedClass.dart';
 import 'package:test_app/grid_view.dart';
 import 'package:test_app/home_screen.dart';
 import 'package:test_app/list_view.dart';
@@ -43,8 +44,9 @@ class MyApp extends StatelessWidget {
             '/page02': (context) => Page02(name: 'Sayed'),
             '/page03': (context) => Page03(),
             '/tab_bar': (context) => TabBars(),
+            '/animatedClass': (context) => AnimatedClass(),
           },
-          initialRoute: '/tab_bar',
+          initialRoute: '/animatedClass',
           theme: ThemeData(
             brightness: Brightness.light,
             primaryColor: Colors.deepPurple,
